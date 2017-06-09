@@ -13,10 +13,14 @@ class ViewController: UIViewController {
     
     var challenge: Exercise!
     var resultButtons: [UIButton]!
+    var actualScore: Int = 0
+    var timer: Int = 0
     let timeoutForNewChallenge: Double = 1.0
     let exercisesBase: Int32 = 5
     
     @IBOutlet weak var challengeText: UILabel!
+    @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var timerValue: UILabel!
     @IBOutlet weak var resultCandidate1: UIButton!
     @IBOutlet weak var resultCandidate2: UIButton!
     @IBOutlet weak var resultCandidate3: UIButton!
@@ -41,6 +45,7 @@ class ViewController: UIViewController {
     private func checkResult(selectedButton: UIButton) {
         if (self.challenge.checkSolution(candidate: Int32(selectedButton.currentTitle!)!)) {
             selectedButton.backgroundColor = UIColor.green
+            self.actualScore += 10
         }
         else {
             selectedButton.backgroundColor = UIColor.red
@@ -48,9 +53,14 @@ class ViewController: UIViewController {
         
         // Defer creation of new Exercise
         DispatchQueue.main.asyncAfter(deadline: .now() + timeoutForNewChallenge) {
+            self.updateScore()
             self.resetButtons()
             self.setExercise(base: self.exercisesBase)
         }
+    }
+    
+    private func updateScore() {
+            self.score.text = "\(self.actualScore)"
     }
     
     private func resetButtons() {
