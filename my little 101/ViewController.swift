@@ -12,66 +12,72 @@ import GameKit
 class ViewController: UIViewController {
     
     var challenge: Exercise!
-    var results: [Int32]!
+    var resultButtons: [UIButton]!
+    let timeoutForNewChallenge: Double = 1.0
+    let exercisesBase: Int32 = 5
     
     @IBOutlet weak var challengeText: UILabel!
-    
     @IBOutlet weak var resultCandidate1: UIButton!
-    
     @IBOutlet weak var resultCandidate2: UIButton!
-    
     @IBOutlet weak var resultCandidate3: UIButton!
-    
     @IBOutlet weak var resultCandidate4: UIButton!
     
     @IBAction func resultCandidateOneSelected(_ sender: Any) {
-        if (self.challenge.checkSolution(candidate: Int32(self.resultCandidate1.currentTitle!)!)) {
-            resultCandidate1.backgroundColor = UIColor.green
-        }
-        else {
-            resultCandidate1.backgroundColor = UIColor.red
-        }
+        checkResult(selectedButton: self.resultCandidate1)
     }
 
     @IBAction func resultCandidateTwoSelected(_ sender: Any) {
-        if (self.challenge.checkSolution(candidate: Int32(self.resultCandidate2.currentTitle!)!)) {
-            resultCandidate2.backgroundColor = UIColor.green
-        }
-        else {
-            resultCandidate2.backgroundColor = UIColor.red
-        }
+        checkResult(selectedButton: self.resultCandidate2)
     }
     
     @IBAction func resultCandidateThreeSelected(_ sender: Any) {
-        if (self.challenge.checkSolution(candidate: Int32(self.resultCandidate3.currentTitle!)!)) {
-            resultCandidate3.backgroundColor = UIColor.green
-        }
-        else {
-            resultCandidate3.backgroundColor = UIColor.red
-        }
+        checkResult(selectedButton: self.resultCandidate3)
     }
     
     @IBAction func resultCandidateFourSelected(_ sender: Any) {
-        if (self.challenge.checkSolution(candidate: Int32(self.resultCandidate4.currentTitle!)!)) {
-            resultCandidate4.backgroundColor = UIColor.green
+        checkResult(selectedButton: self.resultCandidate4)
+    }
+    
+    private func checkResult(selectedButton: UIButton) {
+        if (self.challenge.checkSolution(candidate: Int32(selectedButton.currentTitle!)!)) {
+            selectedButton.backgroundColor = UIColor.green
         }
         else {
-            resultCandidate4.backgroundColor = UIColor.red
+            selectedButton.backgroundColor = UIColor.red
+        }
+        
+        // Defer creation of new Exercise
+        DispatchQueue.main.asyncAfter(deadline: .now() + timeoutForNewChallenge) {
+            self.resetButtons()
+            self.setExercise(base: self.exercisesBase)
+        }
+    }
+    
+    private func resetButtons() {
+        for resultButton in resultButtons {
+            resultButton.backgroundColor = UIColor.white
+        }
+    }
+    
+    private func setExercise(base: Int32) {
+        self.challenge = Exercise(base: self.exercisesBase)
+        challengeText.text = self.challenge.getNewChallenge()
+        let solutions = self.challenge.getSolutionCandidates()
+        let shuffled = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: solutions)
+        
+        for (index, resultButton) in resultButtons.enumerated() {
+            resultButton.setTitle("\(shuffled[index])", for: .normal)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.challenge = Exercise(base: 5)
-        challengeText.text = self.challenge.getNewChallenge()
-        let solutions = self.challenge.getSolutionCandidates()
-        let shuffled = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: solutions)
-        
-        resultCandidate1.setTitle("\(shuffled[0])", for: .normal)
-        resultCandidate2.setTitle("\(shuffled[1])", for: .normal)
-        resultCandidate3.setTitle("\(shuffled[2])", for: .normal)
-        resultCandidate4.setTitle("\(shuffled[3])", for: .normal)
-        
+        self.resultButtons = [self.resultCandidate1,
+                              self.resultCandidate2,
+                              self.resultCandidate3,
+                              self.resultCandidate4]
+    
+        self.setExercise(base: self.exercisesBase)
     }
 
     override func didReceiveMemoryWarning() {
