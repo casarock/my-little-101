@@ -14,7 +14,10 @@ class ViewController: UIViewController {
     var challenge: Exercise!
     var resultButtons: [UIButton]!
     var actualScore: Int = 0
-    var timer: Int = 0
+    var timer = Timer()
+    var availableTime: Int = 30
+    var timeIsRunning: Bool = true
+    var results: ExerciseResult!
     let timeoutForNewChallenge: Double = 1.0
     let exercisesBase: Int32 = 5
     
@@ -43,19 +46,23 @@ class ViewController: UIViewController {
     }
     
     private func checkResult(selectedButton: UIButton) {
-        if (self.challenge.checkSolution(candidate: Int32(selectedButton.currentTitle!)!)) {
-            selectedButton.backgroundColor = UIColor.green
-            self.actualScore += 10
-        }
-        else {
-            selectedButton.backgroundColor = UIColor.red
-        }
-        
-        // Defer creation of new Exercise
-        DispatchQueue.main.asyncAfter(deadline: .now() + timeoutForNewChallenge) {
-            self.updateScore()
-            self.resetButtons()
-            self.setExercise(base: self.exercisesBase)
+        if (self.timeIsRunning) {
+            if (self.challenge.checkSolution(candidate: Int32(selectedButton.currentTitle!)!)) {
+                selectedButton.backgroundColor = UIColor.green
+                self.actualScore += 10
+                self.results.solvedExercises += 1
+            }
+            else {
+                selectedButton.backgroundColor = UIColor.red
+                self.results.wrongExercises += 1
+            }
+            
+            // Defer creation of new Exercise
+            DispatchQueue.main.asyncAfter(deadline: .now() + timeoutForNewChallenge) {
+                self.updateScore()
+                self.resetButtons()
+                self.setExercise(base: self.exercisesBase)
+            }
         }
     }
     
@@ -78,6 +85,21 @@ class ViewController: UIViewController {
         for (index, resultButton) in resultButtons.enumerated() {
             resultButton.setTitle("\(shuffled[index])", for: .normal)
         }
+        
+        self.results.totalExercises += 1
+    }
+    
+    func updateTimer() {
+        self.availableTime -= 1
+        timerValue.text = String(self.availableTime)
+        
+        if (self.availableTime == 0) {
+            // Stop Timer
+            self.timer.invalidate()
+            self.timeIsRunning = false
+            
+            // TODO: transition to result view!
+        }
     }
     
     override func viewDidLoad() {
@@ -87,7 +109,10 @@ class ViewController: UIViewController {
                               self.resultCandidate3,
                               self.resultCandidate4]
     
+        self.results = ExerciseResult(solvedExercises: 0, totalExercises: 0, wrongExercises: 0)
         self.setExercise(base: self.exercisesBase)
+        
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateTimer), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {

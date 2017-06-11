@@ -13,6 +13,7 @@
 		4A532C2D1EE7B21B00E96C35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A532C2C1EE7B21B00E96C35 /* Assets.xcassets */; };
 		4A532C301EE7B21B00E96C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A532C2E1EE7B21B00E96C35 /* LaunchScreen.storyboard */; };
 		4A532C381EE7B29F00E96C35 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A532C371EE7B29F00E96C35 /* Exercise.swift */; };
+		4A80DF8E1EED2C6200C7E98E /* ExerciseResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A80DF8D1EED2C6200C7E98E /* ExerciseResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4A532C2F1EE7B21B00E96C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A532C311EE7B21B00E96C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A532C371EE7B29F00E96C35 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		4A80DF8D1EED2C6200C7E98E /* ExerciseResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4A532C2E1EE7B21B00E96C35 /* LaunchScreen.storyboard */,
 				4A532C311EE7B21B00E96C35 /* Info.plist */,
 				4A532C371EE7B29F00E96C35 /* Exercise.swift */,
+				4A80DF8D1EED2C6200C7E98E /* ExerciseResults.swift */,
 			);
 			path = "my little 101";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				4A532C281EE7B21B00E96C35 /* ViewController.swift in Sources */,
 				4A532C261EE7B21B00E96C35 /* AppDelegate.swift in Sources */,
+				4A80DF8E1EED2C6200C7E98E /* ExerciseResults.swift in Sources */,
 				4A532C381EE7B29F00E96C35 /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +307,7 @@
 				4A532C361EE7B21B00E96C35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
