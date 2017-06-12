@@ -15,6 +15,7 @@
 		4A532C381EE7B29F00E96C35 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A532C371EE7B29F00E96C35 /* Exercise.swift */; };
 		4A80DF8E1EED2C6200C7E98E /* ExerciseResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A80DF8D1EED2C6200C7E98E /* ExerciseResults.swift */; };
 		4A80DF901EEE4CBB00C7E98E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A80DF8F1EEE4CBB00C7E98E /* ResultViewController.swift */; };
+		BB1858AC1EEEB8D3007E2CC0 /* SelectExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1858AB1EEEB8D3007E2CC0 /* SelectExerciseController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4A532C371EE7B29F00E96C35 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		4A80DF8D1EED2C6200C7E98E /* ExerciseResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseResults.swift; sourceTree = "<group>"; };
 		4A80DF8F1EEE4CBB00C7E98E /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		BB1858AB1EEEB8D3007E2CC0 /* SelectExerciseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectExerciseController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				4A532C371EE7B29F00E96C35 /* Exercise.swift */,
 				4A80DF8D1EED2C6200C7E98E /* ExerciseResults.swift */,
 				4A80DF8F1EEE4CBB00C7E98E /* ResultViewController.swift */,
+				BB1858AB1EEEB8D3007E2CC0 /* SelectExerciseController.swift */,
 			);
 			path = "my little 101";
 			sourceTree = "<group>";
@@ -99,6 +102,9 @@
 		4A532C1A1EE7B21B00E96C35 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					btn_1,
+				);
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Appsbude;
@@ -148,6 +154,7 @@
 				4A80DF901EEE4CBB00C7E98E /* ResultViewController.swift in Sources */,
 				4A532C281EE7B21B00E96C35 /* ViewController.swift in Sources */,
 				4A532C261EE7B21B00E96C35 /* AppDelegate.swift in Sources */,
+				BB1858AC1EEEB8D3007E2CC0 /* SelectExerciseController.swift in Sources */,
 				4A80DF8E1EED2C6200C7E98E /* ExerciseResults.swift in Sources */,
 				4A532C381EE7B29F00E96C35 /* Exercise.swift in Sources */,
 			);
