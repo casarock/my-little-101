@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var resultButtons: [UIButton]!
     var actualScore: Int = 0
     var timer = Timer()
-    var availableTime: Int = 30
+    var availableTime: Int = 10
     var timeIsRunning: Bool = true
     var results: ExerciseResult!
     let timeoutForNewChallenge: Double = 1.0
@@ -97,8 +97,7 @@ class ViewController: UIViewController {
             // Stop Timer
             self.timer.invalidate()
             self.timeIsRunning = false
-            
-            // TODO: transition to result view!
+            self.performSegue(withIdentifier: "showResults", sender: self)
         }
     }
     
@@ -118,6 +117,13 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "showResults") {
+            let svc = segue.destination as! ResultViewController;
+            svc.results = self.results
+        }
     }
 
 }
