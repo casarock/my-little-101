@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var results: ExerciseResult!
     var exercisesBase: Int32 = 5
     
-    let timeoutForNewChallenge: Double = 1.0
+    let timeoutForNewChallenge: Double = 0.66
     
     @IBOutlet weak var challengeText: UILabel!
     @IBOutlet weak var score: UILabel!
@@ -49,12 +49,10 @@ class ViewController: UIViewController {
     private func checkResult(selectedButton: UIButton) {
         if (self.timeIsRunning) {
             if (self.challenge.checkSolution(candidate: Int32(selectedButton.currentTitle!)!)) {
-                selectedButton.backgroundColor = UIColor.green
                 self.actualScore += 10
                 self.results.solvedExercises += 1
             }
             else {
-                selectedButton.backgroundColor = UIColor.red
                 self.results.wrongExercises += 1
             }
             

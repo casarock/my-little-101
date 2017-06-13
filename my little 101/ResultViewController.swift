@@ -26,8 +26,7 @@ class ResultViewController: UIViewController {
         wrongResults.text = "\(results.wrongExercises)"
         
         let quote = (Double(results.solvedExercises) / Double(results.totalExercises))
-        
-        print(quote)
+
         if (quote > 0.65) {
             resultSmiley.text = "☺"
         }
