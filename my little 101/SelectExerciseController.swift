@@ -8,15 +8,20 @@
 
 import UIKit
 
-class SelectExerciseController: UIViewController {
+class SelectExerciseController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    var chosenBase: Int!
-
-    @IBOutlet var ExerciseButtons: [UIButton]!
+    var chosenBase: Int = 1
+    var pickerDataSource = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     
-    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var exerciseDuration: UILabel!
+    @IBOutlet weak var durationSlider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.pickerView.dataSource = self;
+        self.pickerView.delegate = self;
         // Do any additional setup after loading the view.
     }
     
@@ -25,21 +30,36 @@ class SelectExerciseController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func changeLanguage(_ sender: Any) {
-        guard let button = sender as? UIButton else {
-            return
-        }
-        
-        if (button.tag > 0 && button.tag < 11) {
-            self.chosenBase = button.tag
-            self.performSegue(withIdentifier: "moveToExercise", sender: self)
-        }
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "moveToExercise") {
             let svc = segue.destination as! ViewController
             svc.exercisesBase = Int32(self.chosenBase)
         }
+    }
+    
+    @IBAction func startExercise(_ sender: Any) {
+        self.performSegue(withIdentifier: "moveToExercise", sender: self)
+    }
+    
+    @IBAction func durationValueChanged(_ sender: UISlider) {
+        let currentValue = Int(sender.value)
+        exerciseDuration.text = "\(currentValue)"
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.pickerDataSource.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.pickerDataSource[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.chosenBase = row + 1
     }
 }

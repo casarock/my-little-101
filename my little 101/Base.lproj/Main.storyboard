@@ -163,96 +163,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIO-vr-YJR" userLabel="btn1">
-                                <rect key="frame" x="16" y="165" width="159" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <state key="normal" title="1"/>
-                                <connections>
-                                    <action selector="changeLanguage:" destination="D2W-ZH-wrU" eventType="touchUpInside" id="0mE-fc-k8M"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qw5-f6-6Ng" userLabel="btn2">
-                                <rect key="frame" x="190" y="165" width="159" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <state key="normal" title="2"/>
-                                <connections>
-                                    <action selector="changeLanguage:" destination="D2W-ZH-wrU" eventType="touchUpInside" id="Rb9-F2-Dgw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxm-Et-tbV" userLabel="btn3">
-                                <rect key="frame" x="16" y="253" width="159" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <state key="normal" title="3"/>
-                                <connections>
-                                    <action selector="changeLanguage:" destination="D2W-ZH-wrU" eventType="touchUpInside" id="0Bn-Ik-E5Q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Geu-dY-FtL" userLabel="btn4">
-                                <rect key="frame" x="190" y="253" width="159" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <state key="normal" title="4"/>
-                                <connections>
-                                    <action selector="changeLanguage:" destination="D2W-ZH-wrU" eventType="touchUpInside" id="DjY-aV-TAY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdb-lq-qaA" userLabel="btn5">
-                                <rect key="frame" x="16" y="341" width="159" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <state key="normal" title="5"/>
-                                <connections>
-                                    <action selector="changeLanguage:" destination="D2W-ZH-wrU" eventType="touchUpInside" id="BQy-7y-1ia"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK4-9U-EWn" userLabel="btn6">
-                                <rect key="frame" x="190" y="341" width="159" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <state key="normal" title="6"/>
-                                <connections>
-                                    <action selector="changeLanguage:" destination="D2W-ZH-wrU" eventType="touchUpInside" id="neE-Pq-CDT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4L-rE-Pdg" userLabel="btn8">
-                                <rect key="frame" x="190" y="429" width="159" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <state key="normal" title="8"/>
-                                <connections>
-                                    <action selector="changeLanguage:" destination="D2W-ZH-wrU" eventType="touchUpInside" id="cJS-Uv-MwO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0c-LU-IbO" userLabel="btn7">
-                                <rect key="frame" x="16" y="429" width="159" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <state key="normal" title="7"/>
-                                <connections>
-                                    <action selector="changeLanguage:" destination="D2W-ZH-wrU" eventType="touchUpInside" id="Ugx-0W-AZe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnG-h9-nLg" userLabel="btn9">
-                                <rect key="frame" x="16" y="517" width="159" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <state key="normal" title="9"/>
-                                <connections>
-                                    <action selector="changeLanguage:" destination="D2W-ZH-wrU" eventType="touchUpInside" id="A1Q-p6-fZv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPR-rc-gLb" userLabel="btn10">
-                                <rect key="frame" x="190" y="517" width="159" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <state key="normal" title="10"/>
-                                <connections>
-                                    <action selector="changeLanguage:" destination="D2W-ZH-wrU" eventType="touchUpInside" id="94k-Of-pwA"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mein 1x1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBL-Bq-uyS">
                                 <rect key="frame" x="74" y="81" width="226" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -260,27 +170,57 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welches 1x1?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUI-mC-lzS">
+                                <rect key="frame" x="106" y="165" width="162" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ysw-xF-b4k">
+                                <rect key="frame" x="-2" y="165" width="375" height="173"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UW5-N4-EqS" id="NR2-i7-h0k"/>
+                                    <outlet property="delegate" destination="UW5-N4-EqS" id="dT4-Qf-hWe"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIK-gQ-HfR">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startExercise:" destination="D2W-ZH-wrU" eventType="touchUpInside" id="Kxf-Lb-foe"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="L7n-Ql-LbM">
+                                <rect key="frame" x="14" y="402" width="347" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="durationValueChanged:" destination="D2W-ZH-wrU" eventType="valueChanged" id="buu-uu-XQf"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JV-oQ-1tX">
+                                <rect key="frame" x="164" y="373" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="testLabel" destination="iBL-Bq-uyS" id="lhp-Up-bMm"/>
-                        <outletCollection property="ExerciseButtons" destination="cIO-vr-YJR" collectionClass="NSMutableArray" id="15g-4R-ugN"/>
-                        <outletCollection property="ExerciseButtons" destination="Qw5-f6-6Ng" collectionClass="NSMutableArray" id="1Ku-AX-xHa"/>
-                        <outletCollection property="ExerciseButtons" destination="Sxm-Et-tbV" collectionClass="NSMutableArray" id="q8v-qB-Bba"/>
-                        <outletCollection property="ExerciseButtons" destination="Geu-dY-FtL" collectionClass="NSMutableArray" id="WlS-By-s5h"/>
-                        <outletCollection property="ExerciseButtons" destination="EK4-9U-EWn" collectionClass="NSMutableArray" id="fNf-Oq-BCG"/>
-                        <outletCollection property="ExerciseButtons" destination="Wdb-lq-qaA" collectionClass="NSMutableArray" id="g3M-fl-PN3"/>
-                        <outletCollection property="ExerciseButtons" destination="z4L-rE-Pdg" collectionClass="NSMutableArray" id="eVn-I7-RaK"/>
-                        <outletCollection property="ExerciseButtons" destination="X0c-LU-IbO" collectionClass="NSMutableArray" id="O25-g1-Gwe"/>
-                        <outletCollection property="ExerciseButtons" destination="dPR-rc-gLb" collectionClass="NSMutableArray" id="mFD-Ec-pKf"/>
-                        <outletCollection property="ExerciseButtons" destination="DnG-h9-nLg" collectionClass="NSMutableArray" id="ku8-p1-wNo"/>
+                        <outlet property="durationSlider" destination="L7n-Ql-LbM" id="g2h-6h-0pT"/>
+                        <outlet property="exerciseDuration" destination="6JV-oQ-1tX" id="aUK-oz-AD9"/>
+                        <outlet property="pickerView" destination="ysw-xF-b4k" id="YJc-Ip-ylF"/>
+                        <outlet property="startButton" destination="pIK-gQ-HfR" id="P3B-4f-KRJ"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="moveToExercise" action="showViewController:sender:" id="NRv-Aj-9Kb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdI-PS-gpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-758" y="123"/>
+            <point key="canvasLocation" x="-759.20000000000005" y="122.78860569715144"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="YKI-mR-ePV">
