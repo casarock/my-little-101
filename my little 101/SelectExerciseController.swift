@@ -9,6 +9,8 @@
 import UIKit
 
 class SelectExerciseController: UIViewController {
+    
+    var chosenBase: Int!
 
     @IBOutlet var ExerciseButtons: [UIButton]!
     
@@ -28,21 +30,16 @@ class SelectExerciseController: UIViewController {
             return
         }
         
-        testLabel.text = "\(button.tag)"
-        /** switch button.tag {
-            case 1:
-                testLabel.text = "\(button.tag))"
-                break;
-            case 2:
-            // Change to Spanish
-                break;
-            case 3:
-            // Change to French, etc
-                break
-            default:
-                print("Unknown language")
-                return
+        if (button.tag > 0 && button.tag < 11) {
+            self.chosenBase = button.tag
+            self.performSegue(withIdentifier: "moveToExercise", sender: self)
         }
-         **/
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "moveToExercise") {
+            let svc = segue.destination as! ViewController
+            svc.exercisesBase = Int32(self.chosenBase)
+        }
     }
 }

@@ -29,6 +29,9 @@ class ResultViewController: UIViewController {
     
     @IBAction func closeResultsView(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        if let parentVC = self.presentingViewController as? ViewController {
+            parentVC.exerciseIsDone()
+        }
     }
 
     /*

@@ -18,8 +18,9 @@ class ViewController: UIViewController {
     var availableTime: Int = 10
     var timeIsRunning: Bool = true
     var results: ExerciseResult!
+    var exercisesBase: Int32 = 5
+    
     let timeoutForNewChallenge: Double = 1.0
-    let exercisesBase: Int32 = 5
     
     @IBOutlet weak var challengeText: UILabel!
     @IBOutlet weak var score: UILabel!
@@ -124,6 +125,11 @@ class ViewController: UIViewController {
             let svc = segue.destination as! ResultViewController;
             svc.results = self.results
         }
+    }
+    
+    func exerciseIsDone() -> Void {
+        print("ja")
+        self.performSegue(withIdentifier: "chooseExercise", sender: self)
     }
 
 }

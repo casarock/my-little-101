@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D2W-ZH-wrU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -144,6 +144,7 @@
                         <outlet property="score" destination="VcH-VT-47F" id="hvu-fG-tgN"/>
                         <outlet property="timerValue" destination="tLe-nB-qRR" id="6om-ee-ete"/>
                         <segue destination="JPe-67-pcM" kind="presentation" identifier="showResults" id="VMv-AU-YDi"/>
+                        <segue destination="D2W-ZH-wrU" kind="showDetail" identifier="chooseExercise" action="showViewController:sender:" id="49G-GO-Wo0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -252,10 +253,10 @@
                                     <action selector="changeLanguage:" destination="D2W-ZH-wrU" eventType="touchUpInside" id="94k-Of-pwA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBL-Bq-uyS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Übung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBL-Bq-uyS">
                                 <rect key="frame" x="74" y="81" width="226" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="44"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -274,11 +275,12 @@
                         <outletCollection property="ExerciseButtons" destination="X0c-LU-IbO" collectionClass="NSMutableArray" id="O25-g1-Gwe"/>
                         <outletCollection property="ExerciseButtons" destination="dPR-rc-gLb" collectionClass="NSMutableArray" id="mFD-Ec-pKf"/>
                         <outletCollection property="ExerciseButtons" destination="DnG-h9-nLg" collectionClass="NSMutableArray" id="ku8-p1-wNo"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="moveToExercise" action="showViewController:sender:" id="NRv-Aj-9Kb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdI-PS-gpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976.79999999999995" y="122.78860569715144"/>
+            <point key="canvasLocation" x="-758" y="123"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="YKI-mR-ePV">
