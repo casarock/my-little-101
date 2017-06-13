@@ -14,12 +14,28 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var closeView: UIButton!
     
+    @IBOutlet weak var resultSmiley: UILabel!
     @IBOutlet weak var correctResults: UILabel!
+    @IBOutlet weak var totalResults: UILabel!
+    @IBOutlet weak var wrongResults: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         correctResults.text = "\(results.solvedExercises)"
-        // Do any additional setup after loading the view.
+        totalResults.text = "\(results.totalExercises)"
+        wrongResults.text = "\(results.wrongExercises)"
+        
+        let quote = (Double(results.solvedExercises) / Double(results.totalExercises))
+        
+        print(quote)
+        if (quote > 0.65) {
+            resultSmiley.text = "☺"
+        }
+        else {
+            resultSmiley.text = "☹"
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,20 +44,7 @@ class ResultViewController: UIViewController {
     }
     
     @IBAction func closeResultsView(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-        if let parentVC = self.presentingViewController as? ViewController {
-            parentVC.exerciseIsDone()
-        }
+        self.performSegue(withIdentifier: "chooseExercise", sender: self)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

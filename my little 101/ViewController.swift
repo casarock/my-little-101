@@ -126,11 +126,6 @@ class ViewController: UIViewController {
             svc.results = self.results
         }
     }
-    
-    func exerciseIsDone() -> Void {
-        print("ja")
-        self.performSegue(withIdentifier: "chooseExercise", sender: self)
-    }
 
 }
 
