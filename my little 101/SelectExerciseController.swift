@@ -20,8 +20,10 @@ class SelectExerciseController: UIViewController, UIPickerViewDataSource, UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.pickerView.dataSource = self;
-        self.pickerView.delegate = self;
+        self.pickerView.dataSource = self
+        self.pickerView.delegate = self
+        self.durationSlider.value = 30
+        self.exerciseDuration.text = "\(self.durationSlider.value)s"
         // Do any additional setup after loading the view.
     }
     
@@ -35,6 +37,7 @@ class SelectExerciseController: UIViewController, UIPickerViewDataSource, UIPick
         if (segue.identifier == "moveToExercise") {
             let svc = segue.destination as! ViewController
             svc.exercisesBase = Int32(self.chosenBase)
+            svc.availableTime = Int(self.durationSlider.value)
         }
     }
     
@@ -44,7 +47,7 @@ class SelectExerciseController: UIViewController, UIPickerViewDataSource, UIPick
     
     @IBAction func durationValueChanged(_ sender: UISlider) {
         let currentValue = Int(sender.value)
-        exerciseDuration.text = "\(currentValue)"
+        self.exerciseDuration.text = "\(currentValue)s"
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

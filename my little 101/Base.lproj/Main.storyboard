@@ -79,7 +79,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10*10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htc-KI-VXZ">
-                                <rect key="frame" x="27" y="128" width="320" height="224"/>
+                                <rect key="frame" x="16" y="128" width="343" height="224"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="106"/>
                                 <nil key="textColor"/>
@@ -201,7 +201,7 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JV-oQ-1tX">
-                                <rect key="frame" x="164" y="373" width="42" height="21"/>
+                                <rect key="frame" x="135" y="373" width="104" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -317,6 +317,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R0T-KE-mG2"/>
+        <segue reference="49G-GO-Wo0"/>
     </inferredMetricsTieBreakers>
 </document>
