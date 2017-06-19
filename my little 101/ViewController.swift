@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var results: ExerciseResult!
     var exercisesBase: Int32 = 5
     
-    let timeoutForNewChallenge: Double = 0.66
+    let timeoutForNewChallenge: Double = 0.3
     
     @IBOutlet weak var challengeText: UILabel!
     @IBOutlet weak var score: UILabel!
