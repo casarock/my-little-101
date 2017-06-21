@@ -33,8 +33,20 @@ class ResultViewController: UIViewController {
         else {
             resultSmiley.text = "☹"
         }
-        
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        resultSmiley.center.x -= view.bounds.width
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.5, delay: 0.2, options: [],
+                       animations: {
+                        self.resultSmiley.center.x += self.view.bounds.width
+
+                       },
+                       completion: nil
+        )
     }
 
     override func didReceiveMemoryWarning() {
