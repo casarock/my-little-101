@@ -51,9 +51,11 @@ class ViewController: UIViewController {
             if (self.challenge.checkSolution(candidate: Int32(selectedButton.currentTitle!)!)) {
                 self.actualScore += 10
                 self.results.solvedExercises += 1
+                selectedButton.backgroundColor = UIColor.green
             }
             else {
                 self.results.wrongExercises += 1
+                selectedButton.backgroundColor = UIColor.red
             }
             
             // Defer creation of new Exercise
